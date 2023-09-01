@@ -1,0 +1,13 @@
+{
+  "name": "case-study-qred",
+  "version": "0.0.1",
+  "description": "A case study",
+  "main": "./src/index.ts",
+  "repository": "git@github.com:wirob/case-study-qred.git",
+  "author": "William Robertson <c.william.robertson@gmail.com>",
+  "license": "MIT",
+  "private": "true",
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {}
+}
