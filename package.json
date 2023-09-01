@@ -8,6 +8,9 @@
   "license": "MIT",
   "private": "true",
   "type": "module",
+  "scripts": {
+    "dev": "nodemon ./src/index.ts"
+  },
   "dependencies": {
     "@apollo/server": "^4.9.3",
     "graphql": "^16.8.0"
