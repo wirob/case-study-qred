@@ -8,7 +8,10 @@
   "license": "MIT",
   "private": "true",
   "type": "module",
-  "dependencies": {},
+  "dependencies": {
+    "@apollo/server": "^4.9.3",
+    "graphql": "^16.8.0"
+  },
   "devDependencies": {
     "@types/node": "^20.5.7",
     "typescript": "^5.2.2"
