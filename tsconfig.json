@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "build",
+    "lib": [
+      "ESNext"
+    ],
+    "target": "ES2017",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "types": [
+      "node"
+    ],
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "tests"
+  ],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
+  }
+}
