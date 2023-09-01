@@ -9,5 +9,8 @@
   "private": "true",
   "type": "module",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "typescript": "^5.2.2"
+  }
 }
