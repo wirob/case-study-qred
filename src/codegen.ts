@@ -10,7 +10,7 @@ const config: CodegenConfig = {
   },
   config: {
     useIndexSignature: true,
-    contextType: "../index#MyContext"
+    contextType: "../index#Context"
   },
 }
 
