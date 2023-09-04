@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
+    "rootDirs": ["src"],
+    "baseUrl": "./src",
     "outDir": "build",
     "lib": [
       "ESNext"
