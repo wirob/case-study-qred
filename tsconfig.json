@@ -3,27 +3,13 @@
     "rootDirs": ["src"],
     "baseUrl": "./src",
     "outDir": "build",
-    "lib": [
-      "ESNext"
-    ],
+    "lib": ["ESNext"],
     "target": "ES2017",
     "module": "ESNext",
     "moduleResolution": "Node",
     "esModuleInterop": true,
-    "types": [
-      "node"
-    ],
+    "types": ["node"]
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "tests"
-  ],
-  "ts-node": {
-    "esm": true,
-    "experimentalSpecifierResolution": "node",
-  }
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "tests"]
 }
