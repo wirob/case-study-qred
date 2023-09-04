@@ -25,3 +25,6 @@ To install them, simply run `asdf install` and they should be installed.
 ### `yarn dev`
 
 Nodemon watches the changes to the `src` dir and exposes the application to port `4000`.
+
+### `yarn build`
+Outputs the transpiled JS to the `build` dir.
