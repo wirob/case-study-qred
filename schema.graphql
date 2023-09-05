@@ -10,9 +10,9 @@ type Company {
 }
 
 type Transaction {
+  company: ID!
+  amount: Int!
   date: Float!
   dateFormatted: String!
-  amount: Int! 
   id: ID!
 }
-
