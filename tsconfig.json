@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "rootDirs": ["src"],
-    "baseUrl": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@App/*": ["src/*"]
+    },
     "outDir": "build",
     "lib": ["ESNext"],
     "target": "ES2017",
@@ -10,6 +13,6 @@
     "esModuleInterop": true,
     "types": ["node", "jest"]
   },
-  "include": ["src", "tests"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist"]
 }

@@ -12,7 +12,7 @@
     "build": "rm -rf build && tsc --project tsconfig.build.json",
     "dev": "tsx watch ./src/index.ts",
     "generate": "graphql-codegen --config ./src/codegen.ts",
-    "test": "jest --watch"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --watch"
   },
   "dependencies": {
     "@apollo/server": "^4.9.3",
