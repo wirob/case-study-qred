@@ -1,13 +1,14 @@
 import { startStandaloneServer } from '@apollo/server/standalone'
 import { ApolloServer } from '@apollo/server'
 import { readFileSync } from 'fs'
-import resolvers from 'resolvers'
-import { TransactionsDataSource } from 'datasources/transactionsAPI'
+import resolvers from 'src/resolvers'
+import { CompanyDataSource, TransactionsDataSource } from 'src/datasources'
 
 const typeDefs = readFileSync('./schema.graphql', { encoding: 'utf-8' })
 
 export interface Context {
   dataSources: {
+    companyAPI: CompanyDataSource
     transactionsAPI: TransactionsDataSource
   }
 }
@@ -22,6 +23,7 @@ const { url } = await startStandaloneServer(server, {
   context: async () => {
     return {
       dataSources: {
+        companyAPI: new CompanyDataSource(),
         transactionsAPI: new TransactionsDataSource(),
       },
     }
