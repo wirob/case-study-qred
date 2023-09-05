@@ -1,5 +1,6 @@
 type Query {
   transactions(id: ID!): [Transaction]
+  company(id: ID!): Company
 }
 
 type Company {
