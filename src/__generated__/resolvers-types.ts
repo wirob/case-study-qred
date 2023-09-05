@@ -21,11 +21,19 @@ export type Company = {
   __typename?: 'Company';
   id: Scalars['ID']['output'];
   name: Scalars['String']['output'];
+  transactions?: Maybe<Array<Maybe<Transaction>>>;
 };
 
 export type Query = {
   __typename?: 'Query';
+  companies?: Maybe<Array<Maybe<Company>>>;
+  company?: Maybe<Company>;
   transactions?: Maybe<Array<Maybe<Transaction>>>;
+};
+
+
+export type QueryCompanyArgs = {
+  id: Scalars['ID']['input'];
 };
 
 
@@ -36,6 +44,7 @@ export type QueryTransactionsArgs = {
 export type Transaction = {
   __typename?: 'Transaction';
   amount: Scalars['Int']['output'];
+  company: Scalars['ID']['output'];
   date: Scalars['Float']['output'];
   dateFormatted: Scalars['String']['output'];
   id: Scalars['ID']['output'];
@@ -138,15 +147,19 @@ export type ResolversParentTypes = ResolversObject<{
 export type CompanyResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Company'] = ResolversParentTypes['Company']> = ResolversObject<{
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  transactions?: Resolver<Maybe<Array<Maybe<ResolversTypes['Transaction']>>>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type QueryResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
+  companies?: Resolver<Maybe<Array<Maybe<ResolversTypes['Company']>>>, ParentType, ContextType>;
+  company?: Resolver<Maybe<ResolversTypes['Company']>, ParentType, ContextType, RequireFields<QueryCompanyArgs, 'id'>>;
   transactions?: Resolver<Maybe<Array<Maybe<ResolversTypes['Transaction']>>>, ParentType, ContextType, RequireFields<QueryTransactionsArgs, 'id'>>;
 }>;
 
 export type TransactionResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Transaction'] = ResolversParentTypes['Transaction']> = ResolversObject<{
   amount?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+  company?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   date?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   dateFormatted?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
