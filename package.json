@@ -15,14 +15,14 @@
   },
   "dependencies": {
     "@apollo/server": "^4.9.3",
-    "graphql": "^16.8.0"
+    "graphql": "^16.8.0",
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^5.0.0",
     "@graphql-codegen/typescript": "^4.0.1",
     "@graphql-codegen/typescript-resolvers": "^4.0.1",
     "@types/node": "^20.5.7",
-    "tsx": "^3.12.8",
-    "typescript": "^5.2.2"
+    "tsx": "^3.12.8"
   }
 }
