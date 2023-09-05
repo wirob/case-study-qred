@@ -11,7 +11,8 @@
   "scripts": {
     "build": "rm -rf build && tsc",
     "dev": "tsx ./src/index.ts",
-    "generate": "graphql-codegen --config ./src/codegen.ts"
+    "generate": "graphql-codegen --config ./src/codegen.ts",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@apollo/server": "^4.9.3",
