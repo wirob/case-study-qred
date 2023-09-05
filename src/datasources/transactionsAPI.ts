@@ -1,4 +1,4 @@
-import type { Transaction } from '../__generated__/resolvers-types'
+import type { Transaction } from '__generated__/resolvers-types'
 
 const transactions: Omit<Required<Transaction>, '__typename'>[] = [
   {

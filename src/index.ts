@@ -2,7 +2,7 @@ import { startStandaloneServer } from '@apollo/server/standalone'
 import { ApolloServer } from '@apollo/server'
 import { readFileSync } from 'fs'
 import resolvers from 'resolvers'
-import { TransactionsDataSource } from './datasources/transactionsAPI'
+import { TransactionsDataSource } from 'datasources/transactionsAPI'
 
 const typeDefs = readFileSync('./schema.graphql', { encoding: 'utf-8' })
 
