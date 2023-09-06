@@ -18,8 +18,8 @@ const transactions: Omit<Required<Transaction>, '__typename'>[] = [
 ]
 
 class TransactionsDataSource {
-  getTransactions(id: string): Transaction[] {
-    return transactions.filter((transaction) => transaction.id === id)
+  getTransactions(): Transaction[] {
+    return transactions
   }
   getCompanyTransactions(id: string): Transaction[] {
     return transactions.filter((transaction) => transaction.company === id)
