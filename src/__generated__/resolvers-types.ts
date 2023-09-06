@@ -26,18 +26,12 @@ export type Company = {
 
 export type Query = {
   __typename?: 'Query';
-  companies?: Maybe<Array<Maybe<Company>>>;
   company?: Maybe<Company>;
   transactions?: Maybe<Array<Maybe<Transaction>>>;
 };
 
 
 export type QueryCompanyArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type QueryTransactionsArgs = {
   id: Scalars['ID']['input'];
 };
 
@@ -152,9 +146,8 @@ export type CompanyResolvers<ContextType = Context, ParentType extends Resolvers
 }>;
 
 export type QueryResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
-  companies?: Resolver<Maybe<Array<Maybe<ResolversTypes['Company']>>>, ParentType, ContextType>;
   company?: Resolver<Maybe<ResolversTypes['Company']>, ParentType, ContextType, RequireFields<QueryCompanyArgs, 'id'>>;
-  transactions?: Resolver<Maybe<Array<Maybe<ResolversTypes['Transaction']>>>, ParentType, ContextType, RequireFields<QueryTransactionsArgs, 'id'>>;
+  transactions?: Resolver<Maybe<Array<Maybe<ResolversTypes['Transaction']>>>, ParentType, ContextType>;
 }>;
 
 export type TransactionResolvers<ContextType = Context, ParentType extends ResolversParentTypes['Transaction'] = ResolversParentTypes['Transaction']> = ResolversObject<{
